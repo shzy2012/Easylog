@@ -10,13 +10,28 @@ namespace Easylog
         private writer w = new writer();
         public void Info(object message)
         {
-            w.Writer("[Info]: " + message);
+            w.Writer("[INFO]: " + message);
         }
         public void Info(string message)
         {
             try
             {
-                w.Writer("[Info]:" + message);
+                w.Writer("[INFO]:" + message);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public void Warn(object message)
+        {
+            w.Writer("[WARN]: " + message);
+        }
+        public void Warn(string message)
+        {
+            try
+            {
+                w.Writer("[WARN]:" + message);
             }
             catch (Exception ex)
             {
@@ -27,7 +42,7 @@ namespace Easylog
         {
             try
             {
-                w.Writer("[Error]:", exception);
+                w.Writer("[ERROR]:", exception);
             }
             catch (Exception ex)
             {
@@ -38,7 +53,7 @@ namespace Easylog
         {
             try
             {
-                w.Writer("[Error]:" + message, exception);
+                w.Writer("[ERROR]:" + message, exception);
             }
             catch (Exception ex)
             {
