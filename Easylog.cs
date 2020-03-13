@@ -82,7 +82,7 @@ namespace Easylog
 
         private static string logFileName = "log.txt";
 
-        private static long maximumFileSize = 200; //100kb
+        private static long maximumFileSize = 200; //200kb
 
         private static int maxSizeRollBackups = 10000000;
 
